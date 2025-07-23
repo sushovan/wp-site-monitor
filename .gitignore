@@ -1,0 +1,39 @@
+# WordPress core
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# Docker
+latest.tar.gz
+db_data/
+*.log
+
+# IDE
+.vscode/
+.idea/
+ 
+# Compressed files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+
+# SQL files
+*.sql
+*.sqlite
+*.db
+
+# OS temp files
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+~*
+*.swp
+*.tmp
