@@ -66,11 +66,8 @@ wp_schedule_event(time(), 'every_minute', 'website_monitor_check_all');
 // - etc.
 ```
 
-## Usage
-
-### Starting the Environment
 ```bash
-cd /Users/sushovan/Projects/docker-collections/wp-site-monitor
+cd <project-root>
 docker-compose up -d
 ```
 
@@ -169,9 +166,6 @@ wp-content/plugins/website-monitor/
 **Version**: 1.0.0  
 **Date**: January 2025
 
-## Usage
-
-### Starting the Environment
 ```bash
 cd /Users/sushovan/Projects/docker-collections/wp-site-monitor
 docker-compose up -d
@@ -183,7 +177,6 @@ docker-compose up -d
 - **Plugin Admin**: http://localhost/wp-admin (after WordPress setup)
 
 ### Monitoring Endpoints
-- **Manual Check**: http://localhost/wp-content/plugins/website-monitor/cron.php
 - **Admin Dashboard**: WordPress Admin → Website Monitor
 
 ### Adding Websites to Monitor
@@ -231,13 +224,13 @@ wp-content/plugins/website-monitor/
 ✅ WordPress cron disabled  
 ✅ Docker cron service running  
 ✅ Monitoring endpoint accessible  
+✅ WordPress cron enabled  
+✅ Docker cron service running  
+✅ Monitoring endpoint accessible  
 ✅ JSON responses working  
 ✅ Frequency logic implemented  
 ✅ Error handling in place  
 ✅ All services operational  
-
-## Next Steps
-1. Complete WordPress initial setup at http://localhost
 2. Install and activate the Website Monitor Pro plugin
 3. Add websites to monitor via the admin interface
 4. Monitor the logs and performance as needed
