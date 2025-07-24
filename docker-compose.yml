@@ -13,6 +13,22 @@ services:
       - ./wp-content:/var/www/html/wp-content
     depends_on:
       - db
+
+  # Cron service for reliable WordPress cron execution
+  cron:
+    image: alpine:latest
+    command: >
+      sh -c "
+        apk add --no-cache curl &&
+        echo '# WordPress Cron Jobs (includes Website Monitor Pro)' > /etc/crontabs/root &&
+        echo '* * * * * curl -s http://wordpress/wp-cron.php?doing_wp_cron >/dev/null 2>&1' >> /etc/crontabs/root &&
+        echo 'WordPress cron service started' &&
+        crond -f -l 2
+      "
+    depends_on:
+      - wordpress
+    restart: unless-stopped
+
   db:
     image: mysql:8
     restart: always

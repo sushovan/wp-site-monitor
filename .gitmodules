@@ -1,0 +1,3 @@
+[submodule "wp-content/plugins/website-monitor"]
+	path = wp-content/plugins/website-monitor
+	url = https://github.com/sushovan/website-monitor-pro.git
